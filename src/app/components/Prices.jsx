@@ -40,13 +40,13 @@ const fadeUp = {
 export default function Prices() {
   return (
     <section
-      className="relative overflow-hidden bg-[#101010] bg-cover bg-center bg-no-repeat py-16 lg:py-28"
+      className="relative block overflow-hidden bg-[#101010] bg-cover bg-center bg-no-repeat py-12 lg:py-28"
       dir="rtl"
       style={{
         backgroundImage: "url('/images/layer-2.png')",
       }}
     >
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-4" id="prices">
         <motion.h2
           initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}

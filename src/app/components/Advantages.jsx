@@ -74,6 +74,7 @@ export default function Advantages() {
     <section
       className="relative overflow-hidden bg-[#101010] py-14 lg:py-20"
       dir="rtl"
+      id="whyChoose"
     >
       <div className="absolute inset-0 opacity-40 bg-[radial-gradient(rgba(255,255,255,0.28)_1px,transparent_1px)] bg-[size:18px_18px]" />
       <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#FFB000]/20 blur-[130px] rounded-full" />
@@ -85,7 +86,7 @@ export default function Advantages() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className="lg:col-span-7 order-1"
+            className="lg:col-span-8 order-1"
           >
             <motion.div
               variants={fadeUp}
@@ -150,7 +151,7 @@ export default function Advantages() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className="lg:col-span-5 order-2"
+            className="lg:col-span-4 order-2"
           >
             <motion.div
               animate={{ y: [0, -14, 0] }}
@@ -165,6 +166,7 @@ export default function Advantages() {
                 width={520}
                 height={650}
                 alt="Haulerz App"
+                quality={100}
                 className="w-full mx-auto object-contain"
               />
             </motion.div>

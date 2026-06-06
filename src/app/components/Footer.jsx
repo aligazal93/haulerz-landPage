@@ -9,7 +9,6 @@ import {
   FaInstagram,
   FaXTwitter,
   FaSnapchat,
-  FaFacebookF,
 } from "react-icons/fa6";
 
 const fadeUp = {
@@ -37,7 +36,6 @@ export default function Footer() {
     FaInstagram,
     FaXTwitter,
     FaSnapchat,
-    FaFacebookF,
   ];
 
   return (
@@ -47,6 +45,7 @@ export default function Footer() {
       style={{
         backgroundImage: "url('/images/layer-3.png')",
       }}
+      id="contactUs"
     >
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -108,9 +107,10 @@ export default function Footer() {
                       <Image
                         src={store.src}
                         alt={store.alt}
+                        quality={100}
                         width={150}
                         height={45}
-                        className="h-[42px] sm:h-[45px] w-auto"
+                        className="h-[40px] w-auto"
                       />
                     </Link>
                   </motion.div>
@@ -133,7 +133,8 @@ export default function Footer() {
                     alt="Haulerz"
                     width={440}
                     height={450}
-                    className="w-[280px] sm:w-[340px] lg:w-[440px] h-[400px] object-fill"
+                    quality={100}
+                    className="w-[280px] sm:w-[340px] lg:w-auto h-[400px] object-fill"
                   />
                 </motion.div>
 
@@ -180,12 +181,12 @@ export default function Footer() {
             className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-white/60 text-custom13"
           >
             {[
-              ["الرئيسية", "/"],
-              ["ليش هولرز؟", "#why"],
+              ["الرئيسية", "#home"],
+              ["ليش هولرز؟", "#whyUs"],
               ["التسعيرات", "#prices"],
-              ["ليش تختار هولرز؟", "#advantages"],
-              ["آراء عملائنا", "#reviews"],
-              ["تواصل معنا", "#contact"],
+              ["ليش تختار هولرز؟", "#whyChoose"],
+              ["آراء عملائنا", "#testimonials"],
+              ["تواصل معنا", "#contactUs"],
             ].map(([title, href]) => (
               <motion.li key={title} variants={fadeUp}>
                 <Link
@@ -248,7 +249,7 @@ export default function Footer() {
         <Link
           href="https://wa.me/96612345678"
           target="_blank"
-          className="fixed bottom-5 right-5 lg:bottom-7 lg:right-7 z-50 group"
+          className="fixed bottom-8 right-5 lg:bottom-7 lg:right-7 z-50 group"
         >
           <span className="absolute inset-0 rounded-full bg-primary blur-xl opacity-40 transition-all duration-500 animate-pulse" />
 
@@ -260,9 +261,10 @@ export default function Footer() {
             <Image
               src="/images/whatsapp.png"
               alt="whatsapp"
-              width={40}
-              height={40}
-              className="w-[30px] h-[30px] object-cover"
+              width={24}
+              height={24}
+              quality={100}
+              className="object-cover"
             />
           </motion.span>
 

@@ -66,7 +66,7 @@ const fadeUp = {
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-20 lg:py-28  block " dir="rtl">
+    <section className="bg-white py-20 lg:py-28  block " dir="rtl" id="testimonials">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"

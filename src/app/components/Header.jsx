@@ -19,15 +19,16 @@ export default function Header() {
 
       <div className="bg-white/5 border lg:mb-0 mb-8 mt-8 relative z-[9999999999999] w-[90%] mx-auto px-8 py-3 border-white/5 backdrop-blur-[17px] rounded-[10px]">
         <div className="grid grid-cols-12 gap-2 items-center">
-          <div className="col-span-12 lg:col-span-3">
+          <div className="col-span-12 lg:col-span-2">
             <div className="flex justify-between items-center">
               <Link href="/">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo-footer.png"
                   alt="logo"
                   width={300}
                   height={50}
-                  className="w-[90px] h-[30px] transition-all duration-500 object-cover hover:scale-110 animate-fadeInUp"
+                  quality={100}
+                  className="w-full block mx-auto h-auto transition-all duration-500 object-fill hover:scale-110 animate-fadeInUp"
                 />
               </Link>
 
@@ -36,16 +37,16 @@ export default function Header() {
                 onClick={() => setOpen(true)}
                 className="flex xl:hidden lg:flex justify-end items-center text-secondary text-custom28 cursor-pointer"
               >
-                <FaBars className="text-white mt-[0px]" size={34} />
+                <FaBars className="text-white mt-[0px]" size={28} />
               </button>
             </div>
           </div>
 
-          <div className=" hidden lg:block col-span-12 lg:col-span-7">
-            <ul className="items-center justify-start gap-8 hidden xl:flex">
+          <div className=" hidden lg:block col-span-12 lg:col-span-8">
+            <ul className="items-center justify-center gap-6 hidden xl:flex">
               <li>
                 <Link
-                  href="/"
+                  href="#home"
                   className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white"
                 >
                   الرئيسية
@@ -53,7 +54,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="#whyUs"
                   className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white"
                 >
                   ليش هولرز ؟
@@ -61,7 +62,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="#prices"
                   className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white"
                 >
                   التسعيرات
@@ -69,7 +70,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/faqs"
+                  href="#whyChoose"
                   className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white"
                 >
                   ليش تختار هولرز؟
@@ -77,7 +78,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="#testimonials"
                   className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white"
                 >
                   آراء عملائنا
@@ -85,7 +86,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="#contactUs"
                   className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white"
                 >
                   تواصل معنا
@@ -134,7 +135,8 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/services"
+              href="#whyUs"
+               onClick={() => setOpen(false)}
               className="text-custom14 block my-4 font-[400] transition-all duration-500 hover:text-primary text-white"
             >
               ليش هولرز ؟
@@ -142,7 +144,9 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/about"
+              href="#prices"
+               onClick={() => setOpen(false)}
+
               className="text-custom14 block my-4 font-[400] transition-all duration-500 hover:text-primary text-white"
             >
               التسعيرات
@@ -150,7 +154,9 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/faqs"
+              href="#whyChoose"
+               onClick={() => setOpen(false)}
+
               className="text-custom14 block my-4 font-[400] transition-all duration-500 hover:text-primary text-white"
             >
               ليش تختار هولرز؟
@@ -158,7 +164,9 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="#testimonials"
+               onClick={() => setOpen(false)}
+
               className="text-custom14 block my-4 font-[400] transition-all duration-500 hover:text-primary text-white"
             >
               آراء عملائنا
@@ -166,7 +174,9 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/contact"
+              href="#contactUs"
+               onClick={() => setOpen(false)}
+
               className="text-custom14 block my-4 font-[400] transition-all duration-500 hover:text-primary text-white"
             >
               تواصل معنا
@@ -174,14 +184,12 @@ export default function Header() {
           </li>
         </ul>
 
-                    <Link
-              href="/"
-              className="block bg-primary text-center mt-[50px] hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom12  text-secondary font-[700] px-8 "
-            >
-              حمل التطبيق الان
-            </Link>
-
-        
+        <Link
+          href="/"
+          className="block bg-primary text-center mt-[50px] hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom12  text-secondary font-[700] px-8 "
+        >
+          حمل التطبيق الان
+        </Link>
       </div>
     </>
   );

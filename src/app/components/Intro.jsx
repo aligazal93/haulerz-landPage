@@ -57,7 +57,7 @@ export default function Intro() {
         backgroundImage: "url('/images/layer.png')",
       }}
     >
-      <div className="container mx-auto h-full px-4">
+      <div className="container mx-auto h-full px-4" id="home">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center min-h-[700px] gap-10">
           <motion.div
             variants={parent}
@@ -130,12 +130,13 @@ export default function Intro() {
                 src="/images/intro.png"
                 alt="Haulerz App"
                 whileHover={{ scale: 1.05 }}
+                quality={100}
                 transition={{
                   type: "spring",
                   stiffness: 260,
                   damping: 22,
                 }}
-                className="w-full mb-8 h-auto object-contain"
+                className="w-auto h-auto mb-8 object-cover"
               />
             </motion.div>
           </motion.div>
