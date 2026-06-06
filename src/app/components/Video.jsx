@@ -17,7 +17,7 @@ export default function Video() {
           {/* Play Button */}
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
-              src="/images/play.png"
+              src="/images/play.svg"
               width={100}
               height={100}
               alt="play"
@@ -28,8 +28,8 @@ export default function Video() {
           {/* Logo */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
             <Image
-              src="/images/logo.png"
-              width={70}
+              src="/images/1.svg"
+              width={140}
               height={70}
               alt="logo"
               quality={100}
