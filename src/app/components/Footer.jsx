@@ -94,8 +94,8 @@ export default function Footer() {
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6"
               >
                 {[
-                  { src: "/images/google.png", alt: "Google Play" },
-                  { src: "/images/appstrore.png", alt: "App Store" },
+                  { src: "/images/google.svg", alt: "Google Play" },
+                  { src: "/images/app.svg", alt: "App Store" },
                 ].map((store, index) => (
                   <motion.div
                     key={index}
@@ -108,9 +108,9 @@ export default function Footer() {
                         src={store.src}
                         alt={store.alt}
                         quality={100}
-                        width={150}
-                        height={45}
-                        className="h-[40px] w-auto"
+                        width={140}
+                        height={40}
+                        className=""
                       />
                     </Link>
                   </motion.div>
@@ -126,15 +126,15 @@ export default function Footer() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
                   animate={{ y: [0, -10, 0] }}
-                  className="absolute top-[0px] sm:bottom-[-70px] lg:top-[-108px] left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 z-20"
+                  className="absolute top-[0px] sm:bottom-[-70px] lg:top-[-73px] left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 z-20"
                 >
                   <Image
-                    src="/images/mob-2.png"
+                    src="/images/mobile.svg"
                     alt="Haulerz"
                     width={440}
                     height={450}
                     quality={100}
-                    className="w-[280px] sm:w-[340px] lg:w-auto h-[400px] object-fill"
+                    className="object-cover"
                   />
                 </motion.div>
 
@@ -168,11 +168,11 @@ export default function Footer() {
         >
           <motion.div variants={fadeUp}>
             <Image
-              src="/images/logo.png"
+              src="/images/1.svg"
               alt="Haulerz"
-              width={130}
-              height={50}
-              className="mx-auto mb-8 w-[120px] h-auto"
+              width={160}
+              height={40}
+              className="mx-auto mb-8 "
             />
           </motion.div>
 
@@ -259,7 +259,7 @@ export default function Footer() {
             className="relative w-[58px] h-[58px] lg:w-[64px] lg:h-[64px] rounded-full bg-gradient-to-br from-primary to-primary flex items-center justify-center text-white text-[30px] border border-white/20 backdrop-blur-md transition-all duration-500"
           >
             <Image
-              src="/images/whatsapp.png"
+              src="/images/whatsapp.svg"
               alt="whatsapp"
               width={24}
               height={24}

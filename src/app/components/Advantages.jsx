@@ -162,12 +162,12 @@ export default function Advantages() {
               }}
             >
               <Image
-                src="/images/mob.png"
-                width={520}
+                src="/images/mob-app.svg"
+                width={750}
                 height={650}
                 alt="Haulerz App"
                 quality={100}
-                className="w-full mx-auto object-contain"
+                className=" mx-auto"
               />
             </motion.div>
           </motion.div>

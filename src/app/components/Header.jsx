@@ -23,12 +23,12 @@ export default function Header() {
             <div className="flex justify-between items-center">
               <Link href="/">
                 <Image
-                  src="/images/logo-footer.png"
+                  src="/images/1.svg"
                   alt="logo"
-                  width={300}
+                  width={200}
                   height={50}
                   quality={100}
-                  className="w-full block mx-auto h-auto transition-all duration-500 object-fill hover:scale-110 animate-fadeInUp"
+                  className="block mx-auto h-auto transition-all duration-500 object-fill hover:scale-110 animate-fadeInUp"
                 />
               </Link>
 

@@ -127,16 +127,18 @@ export default function Intro() {
               className="relative flex justify-center lg:justify-center"
             >
               <motion.img
-                src="/images/intro.png"
+                src="/images/intro-1.svg"
                 alt="Haulerz App"
                 whileHover={{ scale: 1.05 }}
                 quality={100}
+                width={1200}
+                height={720}
                 transition={{
                   type: "spring",
                   stiffness: 260,
                   damping: 22,
                 }}
-                className="w-auto h-auto mb-8 object-cover"
+                className="mb-8"
               />
             </motion.div>
           </motion.div>
