@@ -16,7 +16,7 @@ const features = [
   },
   {
     icon: <Image src="/images/ic-3.png" width={26} height={26} alt="ايقونه" />,
-    title: "أسعار تناسب حجم شغلك",
+    title: "أسعار تناسب احتياجك  ",
   },
   {
     icon: <Image src="/images/ic-4.png" width={26} height={26} alt="ايقونه" />,
