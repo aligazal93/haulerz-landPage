@@ -21,7 +21,7 @@ export default function Video() {
               width={100}
               height={100}
               alt="play"
-              className="cursor-pointer hover:scale-110 transition-all duration-300"
+              className="cursor-pointer w-[50px] lg:w-[200px] hover:scale-110 transition-all duration-300"
             />
           </div>
 
@@ -33,6 +33,7 @@ export default function Video() {
               height={70}
               alt="logo"
               quality={100}
+              className="w-[60px] lg:w-[100px] h-[50px] object-contain"
             />
           </div>
         </div>

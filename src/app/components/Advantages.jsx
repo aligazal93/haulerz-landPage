@@ -115,7 +115,7 @@ export default function Advantages() {
                     stiffness: 320,
                     damping: 22,
                   }}
-                  className="min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-center gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
+                  className="min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
                 >
                   <span className="text-[#FFB000] text-[26px]">
                     {item.icon}
@@ -135,7 +135,7 @@ export default function Advantages() {
                   stiffness: 320,
                   damping: 22,
                 }}
-                className="sm:col-span-2 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-center gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
+                className="sm:col-span-2 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
               >
                 <FaStore className="text-[#FFB000] text-[30px]" />
 

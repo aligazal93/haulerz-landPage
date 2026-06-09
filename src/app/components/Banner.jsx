@@ -11,7 +11,7 @@ export default function Banner() {
             backgroundImage: "url('/images/bg.png')",
           }}
         >
-          <div className="relative flex items-center z-10 max-w-[520px] text-right">
+          <div className="relative flex items-center z-10 max-w-[520px] text-center lg:text-right">
             <h2 className="text-[#121212] text-custom20 lg:text-[26px] font-[800] leading-[1.9]">
               سواء كنت فرد أو صاحب شركة،<br />
               هولرز توفرلك حلول ذكية لشحناتك 
