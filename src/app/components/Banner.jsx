@@ -15,7 +15,7 @@ export default function Banner() {
             <h2 className="text-[#121212] text-custom20 lg:text-[26px] font-[800] leading-[1.9]">
               سواء كنت فرد أو صاحب شركة،<br />
               هولرز توفرلك حلول ذكية لشحناتك 
-              تناسب مع احتياجك
+              تتناسب مع احتياجك
             </h2>
           </div>
 

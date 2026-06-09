@@ -68,7 +68,7 @@ export default function WhyUs() {
             className="bg-white border border-[#E7EAF0] rounded-[24px] min-h-[220px] flex flex-col items-center justify-center text-center px-6 py-8 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] "
           >
             <Image
-              src="/images/w-1.png"
+              src="/images/s-1.png"
               alt="السعر"
               width={86}
               height={86}

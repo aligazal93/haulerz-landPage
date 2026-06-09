@@ -103,7 +103,7 @@ export default function Advantages() {
 
             <motion.div
               variants={parent}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[560px] mx-auto lg:mx-0"
+              className="grid grid-cols-2 sm:grid-cols-2 gap-5 max-w-[560px] mx-auto lg:mx-0"
             >
               {features.map((item, index) => (
                 <motion.div
@@ -121,7 +121,7 @@ export default function Advantages() {
                     {item.icon}
                   </span>
 
-                  <span className="text-white font-bold text-custom14">
+                  <span className="text-white font-bold text-custom12 lg:text-custom14">
                     {item.title}
                   </span>
                 </motion.div>
@@ -135,11 +135,10 @@ export default function Advantages() {
                   stiffness: 320,
                   damping: 22,
                 }}
-                className="sm:col-span-2 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
+                className="sm:col-span-12 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center col-span-2 gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
               >
-                <FaStore className="text-[#FFB000] text-[30px]" />
-
-                <span className="text-white font-bold text-custom15">
+                <Image src="/images/ic-5.png" width={26} height={26} alt="ايقونه" />
+                <span className="text-white font-bold text-custom14">
                   حلول للشركات والمتاجر الإلكترونية
                 </span>
               </motion.div>
