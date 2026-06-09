@@ -73,11 +73,12 @@ export default function Testimonials() {
           variants={fadeUp}
           className="mb-12 text-center"
         >
-          <span className="mx-auto block w-fit rounded-full border border-[#E7EAF0] bg-white px-5 py-2 text-custom12 text-[#5D6F8F] shadow-sm">
+          <span className="mx-auto block w-[120px] rounded-full border border-[#E7EAF0] bg-[#304C891A] px-5 py-2 text-custom14 font-[700] text-[#304C89] shadow-sm">
+            
               الآراء
           </span>
 
-          <h2 className="mt-5 text-custom24 font-[800] text-[#121212] lg:text-custom34">
+          <h2 className="mt-5 text-custom28 font-[700] text-[#121212] lg:text-custom32">
            آراء عملائنا
           </h2>
         </motion.div>

@@ -70,14 +70,14 @@ export default function Intro() {
           >
             <motion.span
               variants={fadeUp}
-              className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-[#F5B93B] text-custom14 font-[400]"
+              className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-[#F5B93B] text-custom16 font-[700]"
             >
-              شحن ذكي يناسب احتياجك  
+              شحن ذكي يناسب احتياجك
             </motion.span>
 
             <motion.h1
               variants={fadeUp}
-              className="text-white text-[32px] md:text-[34px] lg:text-[40px] my-6 font-[700] leading-[60px] lg:leading-[70px]"
+              className="text-white text-[32px] md:text-[34px] lg:text-[48px] my-6 font-[700] leading-[60px] lg:leading-[70px]"
             >
               خل شحناتك توصل أسرع...
               <br />
@@ -113,10 +113,9 @@ export default function Intro() {
           </motion.div>
 
           <motion.div
-            variants={imageMotion}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            initial="hidden"
-            whileInView="show"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.35 }}
             className="lg:col-span-6"
           >

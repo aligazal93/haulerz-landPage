@@ -25,7 +25,7 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                sans: ["var(--font-ibm)", "sans-serif"],
+                zagel: ["var(--font-zagel)", "sans-serif"],
             },
             fontSize: {
                 "custom32": "32px",
@@ -61,11 +61,11 @@ module.exports = {
                 },
                 slideInLeft: {
                     '0%': {
-                        transform: 'translateX(-100%)',
+                        transform: 'translateY(40px)',
                         opacity: '0'
                     },
                     '100%': {
-                        transform: 'translateX(0)',
+                        transform: 'translateY(0)',
                         opacity: '1'
                     },
                 },

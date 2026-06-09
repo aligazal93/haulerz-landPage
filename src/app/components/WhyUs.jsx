@@ -32,7 +32,7 @@ const item = {
 
 export default function WhyUs() {
   return (
-    <section className="bg-white py-20 overflow-hidden" dir="rtl" id="whyUs">
+    <section className="bg-white py-14 overflow-hidden" dir="rtl" id="whyUs">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

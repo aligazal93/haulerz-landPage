@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Video() {
   return (
-    <section className="my-10">
+    <section className="my-4">
       <div className="container">
         <div className="relative z-[9999999999] rounded-[12px]">
           {/* Video Thumbnail */}

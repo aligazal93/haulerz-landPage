@@ -72,7 +72,7 @@ const imageAnim = {
 export default function Advantages() {
   return (
     <section
-      className="relative block w-full pb-[200px] pt-[200px] lg:pt-0"
+      className="relative block w-full pb-[200px] pt-[100px] lg:pt-0"
       dir="rtl"
       id="whyChoose"
     >
@@ -82,21 +82,21 @@ export default function Advantages() {
       <div className="container relative z-10 mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
           <motion.div
-            variants={parent}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.35 }}
             className="lg:col-span-7 order-1"
           >
             <motion.div
               variants={fadeUp}
               className="text-center lg:text-start mb-8"
             >
-              <span className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-center text-[#F5B93B] text-custom12">
+              <span className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-center text-[#F5B93B] text-custom14 font-[700]">
                 مميزات
               </span>
 
-              <h2 className="text-white text-3xl lg:text-custom28 font-[700] mt-6">
+              <h2 className="text-white text-custom18 lg:text-custom32 font-[700] mt-6">
                 ليش تختار هولرز؟
               </h2>
             </motion.div>
@@ -121,7 +121,7 @@ export default function Advantages() {
                     {item.icon}
                   </span>
 
-                  <span className="text-white font-bold text-custom12 lg:text-custom14">
+                  <span className="text-white font-bold text-custom14 lg:text-custom18">
                     {item.title}
                   </span>
                 </motion.div>
@@ -135,9 +135,10 @@ export default function Advantages() {
                   stiffness: 320,
                   damping: 22,
                 }}
-                className="sm:col-span-12 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center col-span-2 gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
+                className="sm:col-span-2 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center col-span-2 gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
               >
                 <Image src="/images/ic-5.png" width={26} height={26} alt="ايقونه" />
+
                 <span className="text-white font-bold text-custom14">
                   حلول للشركات والمتاجر الإلكترونية
                 </span>

@@ -1,10 +1,12 @@
-import { Alexandria } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import localFont from "next/font/local";
+import ScrollToTop from "./components/ScrollToTop";
 
-const alexandria = Alexandria({
-  subsets: ["arabic"],
-  weight: ["400", "500", "700", "800", "900"],
+const fontZagel = localFont({
+  src: "../../public/fonts/ZagelArabicITF-Regular.otf",
+  variable: "--font-zagel",
+  display: "swap",
 });
 
 export const metadata = {
@@ -15,7 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={alexandria.className + " overflow-x-hidden"}>
+      <body className={`${fontZagel.variable} font-zagel overflow-x-hidden`}>
+        <ScrollToTop />
         <Header />
         {children}
       </body>

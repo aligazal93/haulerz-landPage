@@ -40,7 +40,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative bg-[#101010] mt-[100px] lg:mt-[200px] bg-cover bg-center bg-no-repeat pt-16 lg:pt-[120px] pb-6 "
+      className="relative  bg-[#101010] mt-[100px] lg:mt-[200px] bg-cover bg-center bg-no-repeat pt-16 lg:pt-[120px] pb-6"
       dir="rtl"
       style={{
         backgroundImage: "url('/images/layer-3.png')",
@@ -85,8 +85,8 @@ export default function Footer() {
                 variants={fadeUp}
                 className="text-[#101010]/80 text-custom14 lg:text-base leading-8 max-w-[560px] mx-auto lg:mx-0"
               >
-                سواء عندك متجر ناشئ أو شركة كبيرة، هولرز يوفرلك طريقة أسرع
-                وأسهل لإدارة الشحنات داخل السعودية.
+                سواء عندك متجر ناشئ أو شركة كبيرة، هولرز يوفرلك طريقة أسرع وأسهل
+                لإدارة الشحنات داخل السعودية.
               </motion.p>
 
               <motion.div
@@ -139,12 +139,12 @@ export default function Footer() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: 80, scale: 0.9 }}
-                  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                  initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, ease: "easeOut", delay: 0.45 }}
                   animate={{ y: [0, 8, 0] }}
-                  className="absolute top-[35px] sm:top-[25px] lg:top-[50px] left-1/2 lg:right-[-120px] -translate-x-1/2 lg:translate-x-0 z-10"
+                  className="absolute top-[35px] sm:top-[25px] lg:top-[50px] left-1/2 lg:right-0 -translate-x-1/2 lg:translate-x-0 z-10"
                 >
                   <Image
                     src="/images/mini.png"
@@ -228,8 +228,9 @@ export default function Footer() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="mt-10 pt-5 border-t border-white/10 text-center gap-4 text-white text-custom12"
         >
-          <p className="text-center text-custom12">© 2026 هولرز. جميع الحقوق محفوظة.</p>
-
+          <p className="text-center text-custom12">
+            © 2026 هولرز. جميع الحقوق محفوظة.
+          </p>
         </motion.div>
       </div>
 
