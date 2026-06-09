@@ -116,9 +116,9 @@ export default function Prices() {
             delay: 0.35,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-6 text-center text-white text-custom12 leading-6"
+          className="mt-6 text-center text-white text-custom14 leading-6"
         >
-          * الأسعار المذكورة خاصة بمدينة الرياض، للحصول على أسعار الشحن لباقي
+           الأسعار المذكورة خاصة بمدينة الرياض، للحصول على أسعار الشحن لباقي
           المدن يرجى التواصل معنا أو تحميل التطبيق.
         </motion.p>
       </div>
