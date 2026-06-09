@@ -1,3 +1,4 @@
+// src/app/components/ScrollToTop.jsx
 "use client";
 
 import { useEffect } from "react";
@@ -7,7 +8,15 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    document.documentElement.scrollTo(0, 0);
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    });
   }, [pathname]);
 
   return null;
