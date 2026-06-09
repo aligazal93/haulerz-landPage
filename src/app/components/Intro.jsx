@@ -72,7 +72,7 @@ export default function Intro() {
               variants={fadeUp}
               className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-[#F5B93B] text-custom14 font-[400]"
             >
-              شحن ذكي يناسب حجم شغلك
+              شحن ذكي يناسب احتياجك  
             </motion.span>
 
             <motion.h1
