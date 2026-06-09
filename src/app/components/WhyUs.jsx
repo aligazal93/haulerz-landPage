@@ -80,7 +80,7 @@ export default function WhyUs() {
               السعر
             </h3>
 
-            <p className="text-[#8A8A8A] text-custom14 leading-7">
+            <p className="text-[#494949] text-custom14 font-[700] leading-7">
               أقل تكلفة شحن فعلية على متجرك
             </p>
           </motion.div>
@@ -112,7 +112,7 @@ export default function WhyUs() {
               السرعة
             </h3>
 
-            <p className="text-[#8A8A8A] text-custom14 leading-7">
+            <p className="text-[#494949] text-custom14 font-[700] leading-7">
               توصيل داخل الرياض خلال 6 ساعات
               <br />
               إلى خارج الرياض خلال 3–5 أيام
@@ -145,7 +145,7 @@ export default function WhyUs() {
               الراحة
             </h3>
 
-            <p className="text-[#8A8A8A] text-custom14 leading-7">
+            <p className="text-[#494949] text-custom14 font-[700] leading-7">
               نستلم ونوصل
               <br />
               بدون تعقيد... بكل سلاسة  
