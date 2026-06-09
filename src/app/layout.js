@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${fontZagel.variable} font-zagel overflow-x-hidden`}>
+      <body className={`${fontZagel.variable} `}>
         <ScrollToTop />
         <Header />
         {children}

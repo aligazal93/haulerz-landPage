@@ -147,7 +147,7 @@ export default function Advantages() {
           </motion.div>
 
           <motion.div
-            variants={imageAnim}
+                variants={fadeUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
@@ -156,7 +156,7 @@ export default function Advantages() {
             <motion.div
               animate={{ y: [0, -14, 0] }}
               transition={{
-                duration: 4.5,
+                duration: 1.5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}

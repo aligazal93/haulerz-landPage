@@ -59,16 +59,6 @@ module.exports = {
                         transform: 'translateY(10px)'
                     },
                 },
-                slideInLeft: {
-                    '0%': {
-                        transform: 'translateY(40px)',
-                        opacity: '0'
-                    },
-                    '100%': {
-                        transform: 'translateY(0)',
-                        opacity: '1'
-                    },
-                },
                 fadeInUp: {
                     '0%': {
                         transform: 'translateY(40px)',
@@ -81,7 +71,6 @@ module.exports = {
                 },
             },
             animation: {
-                slideInLeft: 'slideInLeft 0.9s ease-out',
                 fadeInUp: 'fadeInUp 0.9s ease-out',
                 softBounce: 'softBounce 1.5s ease-in-out infinite',
             },

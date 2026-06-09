@@ -97,14 +97,18 @@ export default function Intro() {
               className="my-8 flex sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
               <Link
-                href="/services"
+                                href="https://wa.me/96612345678"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[220px] h-[58px] rounded-full bg-[#F5B93B] transition-all duration-300   hover:opacity-50 text-black text-custom14 font-bold flex items-center justify-center"
               >
                 ابدأ الشحن الآن
               </Link>
 
               <Link
-                href="/contact-us"
+                href="https://wa.me/96612345678"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[220px] h-[58px] rounded-full border border-white/60 text-custom14 text-white font-[700] flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black"
               >
                 اطلب عرض سعر
