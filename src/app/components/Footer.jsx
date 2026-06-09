@@ -226,18 +226,10 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mt-10 pt-5 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/50 text-custom12 text-center md:text-start"
+          className="mt-10 pt-5 border-t border-white/10 text-center gap-4 text-white text-custom12"
         >
-          <p>© 2026 هولرز. جميع الحقوق محفوظة.</p>
+          <p className="text-center text-custom12">© 2026 هولرز. جميع الحقوق محفوظة.</p>
 
-          <div className="flex items-center gap-5">
-            <Link className="hover:text-white transition-colors" href="#">
-              سياسة الخصوصية
-            </Link>
-            <Link className="hover:text-white transition-colors" href="#">
-              الشروط والأحكام
-            </Link>
-          </div>
         </motion.div>
       </div>
 

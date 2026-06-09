@@ -74,16 +74,12 @@ export default function Testimonials() {
           className="mb-12 text-center"
         >
           <span className="mx-auto block w-fit rounded-full border border-[#E7EAF0] bg-white px-5 py-2 text-custom12 text-[#5D6F8F] shadow-sm">
-            قصص نجاح
+              الآراء
           </span>
 
           <h2 className="mt-5 text-custom24 font-[800] text-[#121212] lg:text-custom34">
-            شركاء يثقون في هولرز
+           آراء عملائنا
           </h2>
-
-          <p className="mx-auto mt-4 max-w-[560px] text-custom14 leading-7 text-[#7A7A7A]">
-            تجارب من متاجر وشركات اعتمدت على هولرز لتسهيل الشحن وتحسين تجربة العملاء.
-          </p>
         </motion.div>
 
         <motion.div
