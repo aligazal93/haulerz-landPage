@@ -42,9 +42,6 @@ export default function Prices() {
     <section
       className="relative block bg-center bg-no-repeat mt-[10px] lg:mt-[100px] "
       dir="rtl"
-      style={{
-        backgroundImage: "url('/images/layer-3.png')",
-      }}
     >
       <div className="container relative z-10 mx-auto px-4 py-0 lg:py-[100px] " id="prices">
         <motion.h2
@@ -80,7 +77,7 @@ export default function Prices() {
               className="relative min-h-[230px] rounded-[26px] border border-white/10 bg-white/[0.04] px-6 py-7 text-center flex flex-col items-center justify-center shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#FFB000]/40 hover:shadow-[0_20px_60px_rgba(255,176,0,0.08)]"
             >
               <motion.img
-                src="/images/s-1.png"
+                src="/images/box.png"
                 alt="box"
                 className="w-[90px] h-[90px] object-contain"
                 whileHover={{ y: -5, rotate: [0, -4, 4, 0] }}

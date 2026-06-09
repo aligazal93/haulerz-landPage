@@ -15,13 +15,8 @@ export default function Home() {
       <WhyUs />
       <Video />
       <section
-        className="mt-[-100px] lg:mt-[-300px] pt-[200px]"
-        style={{
-          backgroundImage: "url('/images/layer-3.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="mt-[-100px] bg-[#000] lg:mt-[-300px] pt-[200px]"
+
       >
         <Prices />
         <Advantages />
