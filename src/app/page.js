@@ -1,11 +1,12 @@
+import Image from "next/image";
 import Advantages from "./components/Advantages";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Prices from "./components/Prices";
 import Testimonials from "./components/Testimonials";
 import Video from "./components/Video";
 import WhyUs from "./components/WhyUs";
+import Banner from "./components/Banner";
 
 export default function Home() {
   return (
@@ -13,17 +14,19 @@ export default function Home() {
       <Intro />
       <WhyUs />
       <Video />
-
       <section
-        className="mt-[-400px] pt-[400px]"
+        className="mt-[-100px] lg:mt-[-300px] pt-[200px]"
         style={{
-          backgroundImage: "url('/images/layer-2.png')",
+          backgroundImage: "url('/images/layer-3.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
-      > 
-
-      <Prices />
-      <Advantages />
+      >
+        <Prices />
+        <Advantages />
       </section>
+      <Banner />
       <Testimonials />
       <Footer />
     </>

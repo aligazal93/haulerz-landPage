@@ -4,14 +4,14 @@ export default function Video() {
   return (
     <section className="my-10">
       <div className="container">
-        <div className="relative overflow-hidden rounded-2xl">
+        <div className="relative z-[9999999999] rounded-[12px]">
           {/* Video Thumbnail */}
           <Image
             src="/images/video.png"
             width={1280}
             height={720}
             alt="video"
-            className="w-full h-auto"
+            className="w-full object-fill h-auto lg:h-[600px]"
           />
 
           {/* Play Button */}
@@ -28,7 +28,7 @@ export default function Video() {
           {/* Logo */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
             <Image
-              src="/images/1.svg"
+              src="/images/1.png"
               width={140}
               height={70}
               alt="logo"

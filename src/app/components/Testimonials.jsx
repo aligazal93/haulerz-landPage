@@ -3,43 +3,42 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FaStar } from "react-icons/fa";
-import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
 const reviews = [
   {
-    name: "محمد العتيبي",
-    job: "صاحب متجر إلكتروني - الرياض",
-    text: "تعامل احترافي وسرعة بالتوصيل، فرق كبير جدًا في تجربة العملاء بعد استخدام هولرز.",
+    company: "متجر ريحان للعطور",
+    job: "قطاع العطور والتجميل",
+    text: "هولرز ساعدتنا نرفع سرعة التوصيل داخل الرياض ونقلل تكلفة الشحن بشكل واضح.",
   },
   {
-    name: "سارة القحطاني",
-    job: "مالكة متجر عطور",
-    text: "أفضل شركة شحن تعاملنا معها، الأسعار ممتازة والمتابعة لحظية وسهلة جدًا.",
+    company: "نخبة الإلكترونيات",
+    job: "متجر إلكترونيات",
+    text: "التتبع والمتابعة مع العملاء صار أسهل، وتجربة الشحن أصبحت أكثر احترافية.",
   },
   {
-    name: "عبدالله الحربي",
-    job: "تاجر إلكتروني",
-    text: "التوصيل صار أسرع بكثير وخدمة العملاء متجاوبة بشكل ممتاز طوال الوقت.",
+    company: "دار الأناقة",
+    job: "متجر أزياء",
+    text: "مع كثرة الطلبات اليومية، احتجنا شريك شحن منظم وسريع، وهولرز كانت خيار ممتاز.",
   },
   {
-    name: "نورة الشمري",
-    job: "صاحبة متجر ملابس",
-    text: "هولرز سهلت علينا إدارة الطلبات والشحن بشكل كبير، خصوصًا مع كثرة الطلبات اليومية.",
+    company: "تمور القصيم",
+    job: "منتجات غذائية",
+    text: "الخدمة مستقرة والأسعار مناسبة، والأهم أن الطلبات توصل في الوقت المتوقع.",
   },
   {
-    name: "خالد المطيري",
-    job: "مدير متجر إلكتروني",
-    text: "أسعار منافسة وخدمة موثوقة جدًا، التتبع المباشر وفر علينا مشاكل كثيرة مع العملاء.",
+    company: "بيوتي لاين",
+    job: "منتجات تجميل",
+    text: "فرق كبير في تنظيم الشحنات والمتابعة، خصوصًا للطلبات المتكررة داخل وخارج الرياض.",
   },
   {
-    name: "ريم العنزي",
-    job: "متجر منتجات تجميل",
-    text: "تجربة ممتازة من أول طلب، سرعة بالشحن وتنظيم واضح وخدمة احترافية.",
+    company: "مخازن الرياض",
+    job: "تجارة وتوزيع",
+    text: "حل عملي للشركات والمتاجر التي تحتاج شحن سريع وتكلفة واضحة بدون تعقيد.",
   },
 ];
 
@@ -50,101 +49,131 @@ const fadeUp = {
     y: 0,
     filter: "blur(0px)",
     transition: {
-      duration: 0.75,
+      duration: 0.1,
       ease: [0.22, 1, 0.36, 1],
     },
   },
 };
 
-
-// 7583
-
-// 5 38.340 * 3 
-// 10 76680 
-// 2.5 19.250 
-
-
 export default function Testimonials() {
   return (
-    <section className="bg-white py-20 lg:py-28  block " dir="rtl" id="testimonials">
-      <div className="container mx-auto px-4">
+    <section
+      className="relative overflow-hidden bg-[#F8FAFC] pb-[200px] lg:pb-[100px] py-20 lg:py-28"
+      dir="rtl"
+      id="testimonials"
+    >
+      <div className="absolute top-[-120px] right-[-120px] h-[300px] w-[300px] rounded-full bg-[#FFB000]/20 blur-[80px]" />
+      <div className="absolute bottom-[-140px] left-[-120px] h-[320px] w-[320px] rounded-full bg-secondary/10 blur-[90px]" />
+
+      <div className="container relative z-10 mx-auto px-4">
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
-          className="text-center mb-10"
+          className="mb-12 text-center"
         >
-          <span className="block mx-auto rounded-full bg-[#F1F4F8] px-5 py-2 w-[120px] text-center text-[#5D6F8F] text-custom12">
-            الآراء
+          <span className="mx-auto block w-fit rounded-full border border-[#E7EAF0] bg-white px-5 py-2 text-custom12 text-[#5D6F8F] shadow-sm">
+            قصص نجاح
           </span>
 
-          <h2 className="text-[#121212] text-custom24 lg:text-custom30 font-[700] mt-5">
-            آراء عملائنا
+          <h2 className="mt-5 text-custom24 font-[800] text-[#121212] lg:text-custom34">
+            شركاء يثقون في هولرز
           </h2>
+
+          <p className="mx-auto mt-4 max-w-[560px] text-custom14 leading-7 text-[#7A7A7A]">
+            تجارب من متاجر وشركات اعتمدت على هولرز لتسهيل الشحن وتحسين تجربة العملاء.
+          </p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{
-            duration: 0.9,
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <Swiper
-            modules={[Pagination, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
+            modules={[Pagination, Autoplay, EffectCoverflow]}
+            effect="coverflow"
+            grabCursor={true}
             centeredSlides={true}
             loop={true}
+            speed={1200}
             autoplay={{
-              delay: 5000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             pagination={{ clickable: true }}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 120,
+              modifier: 1.8,
+              slideShadows: false,
+            }}
             breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
               768: {
                 slidesPerView: 2,
-                centeredSlides: false,
+                spaceBetween: 20,
               },
               1024: {
                 slidesPerView: 3,
-                centeredSlides: true,
+                spaceBetween: 24,
               },
             }}
-            className="testimonials-swiper max-w-[1100px] mx-auto pb-12"
+            className="testimonials-swiper mx-auto max-w-[1120px] pb-14"
           >
             {reviews.map((item, index) => (
               <SwiperSlide key={index}>
-                <motion.div
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 320,
-                    damping: 22,
-                  }}
-                  className="relative min-h-[170px] rounded-[22px] border border-[#E7EAF0] bg-white px-6 py-8 text-center flex flex-col items-center justify-center"
-                >
-                  <div className="relative z-10 flex justify-center gap-1 text-[#FFB000] text-custom14 mb-4">
-                    {[...Array(5)].map((_, index) => (
-                      <FaStar size={20} className="text-[#FF9C00]" key={index} />
-                    ))}
-                  </div>
+                {({ isActive }) => (
+                  <motion.div
+                    animate={{
+                      scale: isActive ? 1 : 0.92,
+                      opacity: isActive ? 1 : 0.72,
+                      y: isActive ? -8 : 0,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 220,
+                      damping: 22,
+                    }}
+                    className={`relative min-h-[280px] overflow-hidden rounded-[28px] border px-7 py-8 text-center transition-all duration-500 ${
+                      isActive
+                        ? "border-[#FFB000]/40 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.10)]"
+                        : "border-[#E7EAF0] bg-white/80"
+                    }`}
+                  >
+                    <FaQuoteLeft className="absolute left-6 top-6 text-[64px] text-[#FFB000]/10" />
 
-                  <p className="relative z-10 text-[#777] text-custom14 leading-7  mx-auto">
-                    "{item.text}"
-                  </p>
+                    <div className="relative z-10 mx-auto mb-5 flex h-[64px] w-[64px] items-center justify-center rounded-2xl bg-[#FFB000]/10 text-custom24 font-[800] text-[#FF9C00]">
+                      {item.company.charAt(0)} 
+                    </div>
 
-                  <h3 className="relative z-10 text-[#121212] text-custom14 font-[700] mt-4">
-                    {item.name}
-                  </h3>
+                    <div className="relative z-10 mb-5 flex justify-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar key={i} size={18} className="text-[#FF9C00]" />
+                      ))}
+                    </div>
 
-                  <span className="relative z-10 text-[#9A9A9A] text-custom12 mt-2">
-                    {item.job}
-                  </span>
-                </motion.div>
+                    <p className="relative z-10 mx-auto text-custom14 leading-8 text-[#666]">
+                      "{item.text}"
+                    </p>
+
+                    <div className="relative z-10 mt-6 border-t border-[#EEF1F5] pt-5">
+                      <h3 className="text-custom16 font-[800] text-[#121212]">
+                        {item.company}
+                      </h3>
+
+                      <span className="mt-2 block text-custom12 text-[#8A8A8A]">
+                        {item.job}
+                      </span>
+                    </div>
+                  </motion.div>
+                )}
               </SwiperSlide>
             ))}
           </Swiper>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const parent = {
@@ -50,6 +51,7 @@ const imageMotion = {
 };
 
 export default function Intro() {
+  const MotionImage = motion(Image);
   return (
     <section
       className="relative min-h-screen mt-[-200px] overflow-hidden bg-cover bg-center bg-no-repeat pt-[200px]"
@@ -58,7 +60,7 @@ export default function Intro() {
       }}
     >
       <div className="container mx-auto h-full px-4" id="home">
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center min-h-[700px] gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center min-h-[800px] gap-10">
           <motion.div
             variants={parent}
             initial="hidden"
@@ -112,6 +114,7 @@ export default function Intro() {
 
           <motion.div
             variants={imageMotion}
+            sizes="(max-width: 768px) 100vw, 50vw"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.35 }}
@@ -126,19 +129,20 @@ export default function Intro() {
               }}
               className="relative flex justify-center lg:justify-center"
             >
-              <motion.img
-                src="/images/intro-1.svg"
+              <MotionImage
+                src="/images/intro.png"
                 alt="Haulerz App"
-                whileHover={{ scale: 1.05 }}
+                width={900}
+                height={220}
+                priority
                 quality={100}
-                width={1200}
-                height={720}
+                whileHover={{ scale: 1.0 }}
                 transition={{
                   type: "spring",
                   stiffness: 260,
                   damping: 22,
                 }}
-                className="mb-8"
+                className="mb-8 w-full h-auto object-contain"
               />
             </motion.div>
           </motion.div>

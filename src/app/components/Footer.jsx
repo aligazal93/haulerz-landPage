@@ -94,8 +94,8 @@ export default function Footer() {
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6"
               >
                 {[
-                  { src: "/images/google.svg", alt: "Google Play" },
-                  { src: "/images/app.svg", alt: "App Store" },
+                  { src: "/images/appstrore.png", alt: "App Store" },
+                  { src: "/images/googleplay.png", alt: "Google Play" },
                 ].map((store, index) => (
                   <motion.div
                     key={index}
@@ -109,8 +109,8 @@ export default function Footer() {
                         alt={store.alt}
                         quality={100}
                         width={140}
-                        height={40}
-                        className=""
+                        height={80}
+                        className="h-auto object-fill"
                       />
                     </Link>
                   </motion.div>
@@ -126,15 +126,15 @@ export default function Footer() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
                   animate={{ y: [0, -10, 0] }}
-                  className="absolute top-[0px] sm:bottom-[-70px] lg:top-[-73px] left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 z-20"
+                  className="absolute top-[0px] sm:bottom-[-70px] lg:top-[-105px] left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 z-20"
                 >
                   <Image
-                    src="/images/mobile.svg"
+                    src="/images/mobile.png"
                     alt="Haulerz"
                     width={440}
-                    height={450}
+                    height={650}
                     quality={100}
-                    className="object-cover"
+                    className="object-fill w-[600px] h-[400px]"
                   />
                 </motion.div>
 

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const container = {
   hidden: {},
@@ -66,10 +67,13 @@ export default function WhyUs() {
             }}
             className="bg-white border border-[#E7EAF0] rounded-[24px] min-h-[220px] flex flex-col items-center justify-center text-center px-6 py-8 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] "
           >
-            <img
+            <Image
               src="/images/w-3.png"
-              alt=""
-              className="w-[86px] h-[86px] object-contain mb-6"
+              alt="السعر"
+              width={86}
+              height={86}
+              quality={100}
+              className="object-contain mb-6"
             />
 
             <h3 className="text-secondary text-custom20 font-[700] mb-3">
@@ -94,11 +98,15 @@ export default function WhyUs() {
             }}
             className="bg-white border border-[#E7EAF0] rounded-[24px] min-h-[220px] flex flex-col items-center justify-center text-center px-6 py-8 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] "
           >
-            <img
+            <Image
               src="/images/w-2.png"
-              alt=""
-              className="w-[86px] h-[86px] object-contain mb-6"
+              alt="السرعة"
+              width={86}
+              height={86}
+              quality={100}
+              className="object-contain mb-6"
             />
+
 
             <h3 className="text-secondary text-custom20 font-[700] mb-3">
               السرعة
@@ -124,10 +132,13 @@ export default function WhyUs() {
             }}
             className="bg-white border border-[#E7EAF0] rounded-[24px] min-h-[220px] flex flex-col items-center justify-center text-center px-6 py-8 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] "
           >
-            <img
+            <Image
               src="/images/w-1.png"
-              alt=""
-              className="w-[86px] h-[86px] object-contain mb-6"
+              alt="الراحة"
+              width={86}
+              height={86}
+              quality={100}
+              className="object-contain mb-6"
             />
 
             <h3 className="text-secondary text-custom20 font-[700] mb-3">
