@@ -58,7 +58,7 @@ const fadeUp = {
 export default function Testimonials() {
   return (
     <section
-      className="relative overflow-hidden bg-[#F8FAFC] mb-[200px] pb-[20px] lg:pb-[100px] py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#F8FAFC] pb-[200px] lg:pb-[100px] py-20 lg:py-28"
       dir="rtl"
       id="testimonials"
     >
