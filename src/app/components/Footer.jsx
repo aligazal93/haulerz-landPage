@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa6";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 35 },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
