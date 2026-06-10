@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa6";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 35 },
   show: {
     opacity: 1,
     y: 0,
@@ -30,28 +30,28 @@ const stagger = {
 };
 
 export default function Footer() {
-  const socialIcons = [
-    {
-      icon: FaEnvelope,
-      link: "mailto:info@haulerz.sa",
-    },
-    {
-      icon: FaTiktok,
-      link: "https://www.tiktok.com/@haulerz.com",
-    },
-    {
-      icon: FaInstagram,
-      link: "https://www.instagram.com/haulerz.sa",
-    },
-    {
-      icon: FaXTwitter,
-      link: "https://x.com/haulerz",
-    },
-    {
-      icon: FaSnapchat,
-      link: "https://www.snapchat.com/@haulerz",
-    },
-  ];
+const socialIcons = [
+  {
+    icon: FaEnvelope,
+    link: "mailto:info@haulerz.sa",
+  },
+  {
+    icon: FaTiktok,
+    link: "https://www.tiktok.com/@haulerz.com",
+  },
+  {
+    icon: FaInstagram,
+    link: "https://www.instagram.com/haulerz.sa",
+  },
+  {
+    icon: FaXTwitter,
+    link: "https://x.com/haulerz",
+  },
+  {
+    icon: FaSnapchat,
+    link: "https://www.snapchat.com/@haulerz",
+  },
+];
 
   return (
     <footer
@@ -64,11 +64,11 @@ export default function Footer() {
     >
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative -mt-[120px] lg:-mt-[220px] rounded-[24px] lg:rounded-[28px] px-5 sm:px-8 lg:px-16 py-10 lg:py-10 bg-cover bg-center bg-no-repeat"
+          initial={{ opacity: 0, y: 70, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="relative mt-[-300px] rounded-[24px] lg:rounded-[28px] px-5 sm:px-8 lg:px-16 py-10 lg:py-14 bg-cover bg-center bg-no-repeat "
           style={{
             backgroundImage: "url('/images/layer-4.png')",
           }}
@@ -109,16 +109,8 @@ export default function Footer() {
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6"
               >
                 {[
-                  {
-                    src: "/images/appstrore.png",
-                    alt: "App Store",
-                    href: "https://apps.apple.com/sa/app/haulerz-%D9%87%D9%88%D9%84%D8%B1%D8%B2/id6753316208?l=ar",
-                  },
-                  {
-                    src: "/images/googleplay.png",
-                    alt: "Google Play",
-                    href: "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share",
-                  },
+                  { src: "/images/appstrore.png", alt: "App Store" , href: "https://apps.apple.com/sa/app/haulerz-%D9%87%D9%88%D9%84%D8%B1%D8%B2/id6753316208?l=ar" },
+                  { src: "/images/googleplay.png", alt: "Google Play" , href: "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share" },
                 ].map((store, index) => (
                   <motion.div
                     key={index}
@@ -126,18 +118,14 @@ export default function Footer() {
                     whileTap={{ scale: 0.96 }}
                     transition={{ type: "spring", stiffness: 260, damping: 18 }}
                   >
-                    <Link
-                      href={store.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link href={store.href} target="_blank" rel="noopener noreferrer">
                       <Image
                         src={store.src}
                         alt={store.alt}
                         quality={100}
                         width={140}
                         height={80}
-                        className="w-[140px] h-auto object-contain"
+                        className="h-auto object-fill"
                       />
                     </Link>
                   </motion.div>
@@ -146,14 +134,14 @@ export default function Footer() {
             </motion.div>
 
             <div className="lg:col-span-5 order-2">
-              <div className="relative hidden lg:flex items-end justify-center">
+              <div className="relative hidden lg:flex items-end justify-center min-h-[300px] sm:min-h-[360px] lg:min-h-[230px]">
                 <motion.div
                   initial={{ opacity: 0, y: 90, rotate: -4 }}
                   whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
                   animate={{ y: [0, -10, 0] }}
-                  className="absolute top-[0px] sm:bottom-[-70px] lg:top-[-220px] left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 z-20"
+                  className="absolute top-[0px] sm:bottom-[-70px] lg:top-[-105px] left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 z-20"
                 >
                   <Image
                     src="/images/mobile.png"
@@ -161,8 +149,7 @@ export default function Footer() {
                     width={440}
                     height={650}
                     quality={100}
-                    priority
-                    className="w-[420px] h-auto object-contain"
+                    className="object-fill w-[600px] h-[400px]"
                   />
                 </motion.div>
 
@@ -172,7 +159,7 @@ export default function Footer() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, ease: "easeOut", delay: 0.45 }}
                   animate={{ y: [0, 8, 0] }}
-                  className="absolute top-[35px] sm:top-[-50px] lg:top-[-50px] left-1/2 lg:right-0 -translate-x-1/2 lg:translate-x-0 z-10"
+                  className="absolute top-[35px] sm:top-[25px] lg:top-[50px] left-1/2 lg:right-0 -translate-x-1/2 lg:translate-x-0 z-10"
                 >
                   <Image
                     src="/images/mini.png"
@@ -196,7 +183,7 @@ export default function Footer() {
         >
           <motion.div variants={fadeUp}>
             <Image
-              src="/images/logo-footer.png"
+              src="/images/1.svg"
               alt="Haulerz"
               width={160}
               height={40}
@@ -227,32 +214,32 @@ export default function Footer() {
             ))}
           </motion.ul>
 
-          <motion.div
-            variants={stagger}
-            className="flex flex-wrap items-center justify-center gap-3 mt-8"
-          >
-            {socialIcons.map((item, index) => {
-              const Icon = item.icon;
+<motion.div
+  variants={stagger}
+  className="flex flex-wrap items-center justify-center gap-3 mt-8"
+>
+  {socialIcons.map((item, index) => {
+    const Icon = item.icon;
 
-              return (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  whileHover={{ y: -6, scale: 1.08 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-white/10 bg-white/[0.04] flex items-center justify-center text-white/70 hover:text-[#FFBF44] hover:border-[#FFBF44]/40 transition-all"
-                  >
-                    <Icon />
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+    return (
+      <motion.div
+        key={index}
+        variants={fadeUp}
+        whileHover={{ y: -6, scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <Link
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10 h-10 rounded-full border border-white/10 bg-white/[0.04] flex items-center justify-center text-white/70 hover:text-[#FFBF44] hover:border-[#FFBF44]/40 transition-all"
+        >
+          <Icon />
+        </Link>
+      </motion.div>
+    );
+  })}
+</motion.div>
         </motion.div>
 
         <motion.div
