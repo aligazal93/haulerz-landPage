@@ -137,7 +137,7 @@ export default function Footer() {
                         quality={100}
                         width={140}
                         height={80}
-                        className="h-auto object-fill"
+                        className="w-[140px] h-auto object-contain"
                       />
                     </Link>
                   </motion.div>
@@ -196,7 +196,7 @@ export default function Footer() {
         >
           <motion.div variants={fadeUp}>
             <Image
-              src="/images/1.svg"
+              src="/images/logo-footer.png"
               alt="Haulerz"
               width={160}
               height={40}
