@@ -31,10 +31,30 @@ const fadeUp = {
   },
 };
 
-
-
 export default function Intro() {
   const MotionImage = motion(Image);
+  const handleClick = () => {
+    const userAgent = navigator.userAgent;
+
+    if (/Android/i.test(userAgent)) {
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share",
+        "_blank"
+      );
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+      window.open(
+        "https://apps.apple.com/sa/app/haulerz-%D9%87%D9%88%D9%84%D8%B1%D8%B2/id6753316208?l=ar",
+        "_blank"
+      );
+    } else {
+      // Desktop
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share",
+        "_blank"
+      );
+    }
+  };
+
   return (
     <section
       className="relative min-h-screen mt-[-200px] overflow-hidden bg-cover bg-center bg-no-repeat pt-[200px]"
@@ -79,14 +99,14 @@ export default function Intro() {
               variants={fadeUp}
               className="my-8 flex sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
-              <Link
-                href="https://wa.me/+966920035830"
+              <button
+                onClick={handleClick}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[220px] h-[58px] rounded-full bg-[#F5B93B] transition-all duration-300   hover:opacity-50 text-black text-custom14 font-bold flex items-center justify-center"
               >
                 ابدأ الشحن الآن
-              </Link>
+              </button>
 
               <Link
                 href="https://wa.me/+966920035830"
