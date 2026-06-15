@@ -55,7 +55,7 @@ export default function Header() {
 
           <div className="hidden lg:block col-span-12 lg:col-span-2">
             <Link
-              href="/"
+              href="#contactUs"
               className="lg:block hidden bg-primary hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom14 float-end text-secondary font-[700] px-8"
             >
               حمل التطبيق الان
@@ -104,7 +104,7 @@ export default function Header() {
         </ul>
 
         <Link
-          href="/"
+          href="#contactUs"
           onClick={() => setOpen(false)}
           className="block bg-primary text-center mt-[50px] hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom12 text-secondary font-[700] px-8"
         >

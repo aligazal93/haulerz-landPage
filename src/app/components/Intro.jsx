@@ -97,7 +97,7 @@ export default function Intro() {
               className="my-8 flex sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
               <Link
-                                href="https://wa.me/96612345678"
+                href="https://wa.me/+966920035830"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[220px] h-[58px] rounded-full bg-[#F5B93B] transition-all duration-300   hover:opacity-50 text-black text-custom14 font-bold flex items-center justify-center"
@@ -106,7 +106,7 @@ export default function Intro() {
               </Link>
 
               <Link
-                href="https://wa.me/96612345678"
+                href="https://wa.me/+966920035830"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[220px] h-[58px] rounded-full border border-white/60 text-custom14 text-white font-[700] flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black"

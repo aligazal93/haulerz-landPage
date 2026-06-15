@@ -30,28 +30,28 @@ const stagger = {
 };
 
 export default function Footer() {
-const socialIcons = [
-  {
-    icon: FaEnvelope,
-    link: "mailto:info@haulerz.sa",
-  },
-  {
-    icon: FaTiktok,
-    link: "https://www.tiktok.com/@haulerz.com",
-  },
-  {
-    icon: FaInstagram,
-    link: "https://www.instagram.com/haulerz.sa",
-  },
-  {
-    icon: FaXTwitter,
-    link: "https://x.com/haulerz",
-  },
-  {
-    icon: FaSnapchat,
-    link: "https://www.snapchat.com/@haulerz",
-  },
-];
+  const socialIcons = [
+    {
+      icon: FaTiktok,
+      link: "https://www.tiktok.com/@haulerz.com",
+    },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/haulerz.sa",
+    },
+    {
+      icon: FaXTwitter,
+      link: "https://x.com/haulerz",
+    },
+    {
+      icon: FaSnapchat,
+      link: "https://www.snapchat.com/@haulerz",
+    },
+    {
+      icon: FaEnvelope,
+      link: "mailto:Info@haulerz.com",
+    },
+  ];
 
   return (
     <footer
@@ -109,8 +109,16 @@ const socialIcons = [
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6"
               >
                 {[
-                  { src: "/images/appstrore.png", alt: "App Store" , href: "https://apps.apple.com/sa/app/haulerz-%D9%87%D9%88%D9%84%D8%B1%D8%B2/id6753316208?l=ar" },
-                  { src: "/images/googleplay.png", alt: "Google Play" , href: "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share" },
+                  {
+                    src: "/images/appstrore.png",
+                    alt: "App Store",
+                    href: "https://apps.apple.com/sa/app/haulerz-%D9%87%D9%88%D9%84%D8%B1%D8%B2/id6753316208?l=ar",
+                  },
+                  {
+                    src: "/images/googleplay.png",
+                    alt: "Google Play",
+                    href: "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share",
+                  },
                 ].map((store, index) => (
                   <motion.div
                     key={index}
@@ -118,7 +126,11 @@ const socialIcons = [
                     whileTap={{ scale: 0.96 }}
                     transition={{ type: "spring", stiffness: 260, damping: 18 }}
                   >
-                    <Link href={store.href} target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href={store.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Image
                         src={store.src}
                         alt={store.alt}
@@ -214,32 +226,32 @@ const socialIcons = [
             ))}
           </motion.ul>
 
-<motion.div
-  variants={stagger}
-  className="flex flex-wrap items-center justify-center gap-3 mt-8"
->
-  {socialIcons.map((item, index) => {
-    const Icon = item.icon;
+          <motion.div
+            variants={stagger}
+            className="flex flex-wrap items-center justify-center gap-3 mt-8"
+          >
+            {socialIcons.map((item, index) => {
+              const Icon = item.icon;
 
-    return (
-      <motion.div
-        key={index}
-        variants={fadeUp}
-        whileHover={{ y: -6, scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Link
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 rounded-full border border-white/10 bg-white/[0.04] flex items-center justify-center text-white/70 hover:text-[#FFBF44] hover:border-[#FFBF44]/40 transition-all"
-        >
-          <Icon />
-        </Link>
-      </motion.div>
-    );
-  })}
-</motion.div>
+              return (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{ y: -6, scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full border border-white/10 bg-white/[0.04] flex items-center justify-center text-white/70 hover:text-[#FFBF44] hover:border-[#FFBF44]/40 transition-all"
+                  >
+                    <Icon />
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </motion.div>
 
         <motion.div
@@ -261,7 +273,7 @@ const socialIcons = [
         transition={{ delay: 0.8, type: "spring", stiffness: 220, damping: 16 }}
       >
         <Link
-          href="https://wa.me/96612345678"
+          href="https://wa.me/+966920035830"
           target="_blank"
           className="fixed bottom-8 right-5 lg:bottom-7 lg:right-7 z-50 group"
         >
