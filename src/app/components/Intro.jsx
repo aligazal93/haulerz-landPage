@@ -31,24 +31,7 @@ const fadeUp = {
   },
 };
 
-const imageMotion = {
-  hidden: {
-    opacity: 0,
-    x: -60,
-    scale: 0.92,
-    filter: "blur(10px)",
-  },
-  show: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-    filter: "blur(0px)",
-    transition: {
-      duration: 1,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
+
 
 export default function Intro() {
   const MotionImage = motion(Image);
