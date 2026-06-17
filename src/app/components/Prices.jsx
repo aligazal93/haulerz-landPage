@@ -5,10 +5,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const prices = [
-  { weight: "من 1 إلى 15 كيلو", price: "20" },
-  { weight: "من 20 إلى 25 كيلو", price: "35" },
-  { weight: "من 25 إلى 30 كيلو", price: "50" },
-  { weight: "من 30 إلى 35 كيلو", price: "65" },
+  { weight: "Up to 15 kg", price: "20" },
+  { weight: "16 kg to 20 kg", price: "35" },
+  { weight: "21 kg to 25 kg", price: "50" },
+  { weight: "26 kg to 30 kg", price: "65" },
 ];
 
 const parent = {
@@ -87,7 +87,7 @@ export default function Prices() {
                 }}
               />
 
-              <h3 className="text-white text-custom16 font-[700] my-2">
+              <h3 className="text-white text-custom20 font-[500] my-2" dir="ltr">
                 {item.weight}
               </h3>
 
