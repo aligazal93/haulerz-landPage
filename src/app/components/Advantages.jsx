@@ -3,82 +3,50 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaStore } from "react-icons/fa";
-
-const features = [
-  {
-    icon: <Image src="/images/ic-1.png" width={26} height={26} alt="ايقونه" />,
-    title: "توصيل سريع ومرن",
-  },
-  {
-    icon: <Image src="/images/ic-2.png" width={26} height={26} alt="ايقونه" />,
-    title: "تتبع مباشر للطلبات",
-  },
-  {
-    icon: <Image src="/images/ic-3.png" width={26} height={26} alt="ايقونه" />,
-    title: "أسعار تناسب احتياجك  ",
-  },
-  {
-    icon: <Image src="/images/ic-4.png" width={26} height={26} alt="ايقونه" />,
-    title: "دعم سريع للتجار",
-  },
-];
 
 const parent = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.14,
-    },
+    transition: { staggerChildren: 0.14 },
   },
 };
 
 const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 35,
-    filter: "blur(8px)",
-  },
+  hidden: { opacity: 0, y: 35, filter: "blur(8px)" },
   show: {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: {
-      duration: 0.75,
-      ease: [0.22, 1, 0.36, 1],
-    },
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
-const imageAnim = {
-  hidden: {
-    opacity: 0,
-    x: -70,
-    scale: 0.92,
-    filter: "blur(10px)",
-  },
-  show: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-    filter: "blur(0px)",
-    transition: {
-      duration: 1,
-      ease: [0.22, 1, 0.36, 1],
+export default function Advantages({ isArabic }) {
+  const features = [
+    {
+      icon: "/images/ic-1.png",
+      title: isArabic ? "توصيل سريع ومرن" : "Fast and flexible delivery",
     },
-  },
-};
+    {
+      icon: "/images/ic-2.png",
+      title: isArabic ? "تتبع مباشر للطلبات" : "Live order tracking",
+    },
+    {
+      icon: "/images/ic-3.png",
+      title: isArabic ? "أسعار تناسب احتياجك" : "Prices that fit your needs",
+    },
+    {
+      icon: "/images/ic-4.png",
+      title: isArabic ? "دعم سريع للتجار" : "Fast support for merchants",
+    },
+  ];
 
-export default function Advantages() {
   return (
     <section
       className="relative block w-full pb-[200px] pt-[100px] lg:pt-0"
-      dir="rtl"
+      dir={isArabic ? "rtl" : "ltr"}
       id="whyChoose"
     >
-      {/* <div className="absolute inset-0 opacity-40 bg-[radial-gradient(rgba(255,255,255,0.28)_1px,transparent_1px)] bg-[size:18px_18px]" />
-      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#FFB000]/20 blur-[130px] rounded-full" /> */}
-
       <div className="container relative z-10 mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
           <motion.div
@@ -88,16 +56,13 @@ export default function Advantages() {
             viewport={{ once: true, amount: 0.35 }}
             className="lg:col-span-7 order-1"
           >
-            <motion.div
-              variants={fadeUp}
-              className="text-center lg:text-start mb-8"
-            >
+            <motion.div variants={fadeUp} className="text-center lg:text-start mb-8">
               <span className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-center text-[#F5B93B] text-custom14 font-[700]">
-                مميزات
+                {isArabic ? "مميزات" : "Features"}
               </span>
 
               <h2 className="text-white text-custom18 lg:text-custom32 font-[700] mt-6">
-                ليش تختار هولرز؟
+                {isArabic ? "ليش تختار هولرز؟" : "Why Choose Haulerz?"}
               </h2>
             </motion.div>
 
@@ -110,15 +75,16 @@ export default function Advantages() {
                   key={index}
                   variants={fadeUp}
                   whileHover={{ y: -6, scale: 1.02 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 320,
-                    damping: 22,
-                  }}
+                  transition={{ type: "spring", stiffness: 320, damping: 22 }}
                   className="min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
                 >
                   <span className="text-[#FFB000] text-[26px]">
-                    {item.icon}
+                    <Image
+                      src={item.icon}
+                      width={26}
+                      height={26}
+                      alt={item.title}
+                    />
                   </span>
 
                   <span className="text-white font-bold text-custom14 lg:text-custom18">
@@ -130,24 +96,27 @@ export default function Advantages() {
               <motion.div
                 variants={fadeUp}
                 whileHover={{ y: -6, scale: 1.02 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 320,
-                  damping: 22,
-                }}
+                transition={{ type: "spring", stiffness: 320, damping: 22 }}
                 className="sm:col-span-2 min-h-[86px] rounded-[18px] border border-white/10 bg-white/[0.04] flex items-center justify-start lg:justify-center col-span-2 gap-4 px-6 hover:border-[#FFB000]/40 hover:shadow-[0_20px_50px_rgba(255,176,0,0.08)]"
               >
-                <Image src="/images/ic-5.png" width={26} height={26} alt="ايقونه" />
+                <Image
+                  src="/images/ic-5.png"
+                  width={26}
+                  height={26}
+                  alt={isArabic ? "ايقونه" : "icon"}
+                />
 
                 <span className="text-white font-bold text-custom14">
-                  حلول للشركات والمتاجر الإلكترونية
+                  {isArabic
+                    ? "حلول للشركات والمتاجر الإلكترونية"
+                    : "Solutions for companies and online stores"}
                 </span>
               </motion.div>
             </motion.div>
           </motion.div>
 
           <motion.div
-                variants={fadeUp}
+            variants={fadeUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}

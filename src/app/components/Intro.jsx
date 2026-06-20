@@ -31,8 +31,30 @@ const fadeUp = {
   },
 };
 
-export default function Intro() {
+export default function Intro({ isArabic }) {
   const MotionImage = motion(Image);
+
+  const text = {
+    badge: isArabic
+      ? "شحن ذكي يناسب احتياجك"
+      : "Smart shipping for your needs",
+
+    titleLine1: isArabic
+      ? "خل شحناتك توصل أسرع..."
+      : "Get your shipments delivered faster...",
+
+    titleLine2: isArabic
+      ? "وبتكلفة أقل"
+      : "at a lower cost",
+
+    description: isArabic
+      ? "حل لوجستي ذكي يسهل عليك إرسال شحناتك، بأسعار تنافسية وباقات تناسب حجم احتياجك."
+      : "A smart logistics solution that makes shipping easier, with competitive prices and packages that fit your needs.",
+
+    primaryButton: isArabic ? "ابدأ الشحن الآن" : "Start Shipping Now",
+    secondaryButton: isArabic ? "اطلب عرض سعر" : "Request a Quote",
+  };
+
   const handleClick = () => {
     const userAgent = navigator.userAgent;
 
@@ -47,7 +69,6 @@ export default function Intro() {
         "_blank"
       );
     } else {
-      // Desktop
       window.open(
         "https://play.google.com/store/apps/details?id=com.haulerz.order&pcampaignid=web_share",
         "_blank"
@@ -75,24 +96,23 @@ export default function Intro() {
               variants={fadeUp}
               className="inline-flex rounded-full bg-[#FFBF44]/10 px-8 py-3 text-[#F5B93B] text-custom16 font-[700]"
             >
-              شحن ذكي يناسب احتياجك
+              {text.badge}
             </motion.span>
 
             <motion.h1
               variants={fadeUp}
               className="text-white text-[32px] md:text-[34px] lg:text-[48px] my-6 font-[700] leading-[60px] lg:leading-[70px]"
             >
-              خل شحناتك توصل أسرع...
+              {text.titleLine1}
               <br />
-              وبتكلفة أقل
+              {text.titleLine2}
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-white text-base md:text-[18px] leading-[34px] mx-auto lg:mx-0"
             >
-              حل لوجستي ذكي يسهل عليك ارسال شحناتك، بأسعار تنافسية وباقات تناسب
-              حجم احتياجك .
+              {text.description}
             </motion.p>
 
             <motion.div
@@ -101,11 +121,9 @@ export default function Intro() {
             >
               <button
                 onClick={handleClick}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[220px] h-[58px] rounded-full bg-[#F5B93B] transition-all duration-300   hover:opacity-50 text-black text-custom14 font-bold flex items-center justify-center"
+                className="w-[220px] h-[58px] rounded-full bg-[#F5B93B] transition-all duration-300 hover:opacity-50 text-black text-custom14 font-bold flex items-center justify-center"
               >
-                ابدأ الشحن الآن
+                {text.primaryButton}
               </button>
 
               <Link
@@ -114,7 +132,7 @@ export default function Intro() {
                 rel="noopener noreferrer"
                 className="w-[220px] h-[58px] rounded-full border border-white/60 text-custom14 text-white font-[700] flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-black"
               >
-                اطلب عرض سعر
+                {text.secondaryButton}
               </Link>
             </motion.div>
           </motion.div>

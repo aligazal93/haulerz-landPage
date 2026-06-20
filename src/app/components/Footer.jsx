@@ -20,6 +20,7 @@ const fadeUp = {
   },
 };
 
+
 const stagger = {
   hidden: {},
   show: {
@@ -29,7 +30,28 @@ const stagger = {
   },
 };
 
-export default function Footer() {
+export default function Footer({ isArabic }) {
+  const content = {
+  title: isArabic
+    ? "خل شحناتك تمشي بدون تعقيد"
+    : "Move your shipments without complications",
+
+  description: isArabic
+    ? "سواء عندك متجر ناشئ أو شركة كبيرة، هولرز يوفرلك طريقة أسرع وأسهل لإدارة الشحنات داخل السعودية."
+    : "Whether you have a startup store or a large company, Haulerz provides a faster and easier way to manage shipments across Saudi Arabia.",
+
+  home: isArabic ? "الرئيسية" : "Home",
+  whyUs: isArabic ? "ليش هولرز؟" : "Why Haulerz?",
+  pricing: isArabic ? "التسعيرات" : "Pricing",
+  whyChoose: isArabic ? "ليش تختار هولرز؟" : "Why Choose Haulerz?",
+  testimonials: isArabic ? "آراء عملائنا" : "Testimonials",
+  contact: isArabic ? "تواصل معنا" : "Contact Us",
+
+  copyright: isArabic
+    ? "© 2026 هولرز. جميع الحقوق محفوظة."
+    : "© 2026 Haulerz. All Rights Reserved.",
+};
+
   const socialIcons = [
     {
       icon: FaTiktok,
@@ -56,7 +78,7 @@ export default function Footer() {
   return (
     <footer
       className="relative  bg-[#101010] mt-[100px] lg:mt-[200px] bg-cover bg-center bg-no-repeat pt-16 lg:pt-[120px] pb-6"
-      dir="rtl"
+     dir={isArabic ? "rtl" : "ltr"} 
       style={{
         backgroundImage: "url('/images/layer-3.png')",
       }}
@@ -93,15 +115,14 @@ export default function Footer() {
                 variants={fadeUp}
                 className="text-[#101010] text-[24px] sm:text-[28px] lg:text-custom28 font-[700] mb-4 leading-[1.5]"
               >
-                خل شحناتك تمشي بدون تعقيد
+               {content.title}
               </motion.h2>
 
               <motion.p
                 variants={fadeUp}
                 className="text-[#101010]/80 text-custom14 lg:text-base leading-8 max-w-[560px] mx-auto lg:mx-0"
               >
-                سواء عندك متجر ناشئ أو شركة كبيرة، هولرز يوفرلك طريقة أسرع وأسهل
-                لإدارة الشحنات داخل السعودية.
+                {content.description}
               </motion.p>
 
               <motion.div
@@ -208,12 +229,12 @@ export default function Footer() {
             className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-white/60 text-custom13"
           >
             {[
-              ["الرئيسية", "#home"],
-              ["ليش هولرز؟", "#whyUs"],
-              ["التسعيرات", "#prices"],
-              ["ليش تختار هولرز؟", "#whyChoose"],
-              ["آراء عملائنا", "#testimonials"],
-              ["تواصل معنا", "#contactUs"],
+              [content.home, "#home"],
+              [content.whyUs, "#whyUs"],
+              [content.pricing, "#prices"],
+              [content.whyChoose, "#whyChoose"],
+              [content.testimonials, "#testimonials"],
+              [content.contact, "#contactUs"],
             ].map(([title, href]) => (
               <motion.li key={title} variants={fadeUp}>
                 <Link
@@ -262,7 +283,7 @@ export default function Footer() {
           className="mt-10 pt-5 border-t border-white/10 text-center gap-4 text-white text-custom12"
         >
           <p className="text-center text-custom12">
-            © 2026 هولرز. جميع الحقوق محفوظة.
+            {content.copyright}
           </p>
         </motion.div>
       </div>

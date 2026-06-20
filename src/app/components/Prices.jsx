@@ -4,13 +4,6 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
-const prices = [
-  { weight: "Up to 15 kg", price: "20" },
-  { weight: "16 kg to 20 kg", price: "35" },
-  { weight: "21 kg to 25 kg", price: "50" },
-  { weight: "26 kg to 30 kg", price: "65" },
-];
-
 const parent = {
   hidden: {},
   show: {
@@ -37,13 +30,35 @@ const fadeUp = {
   },
 };
 
-export default function Prices() {
+export default function Prices({ isArabic }) {
+  const prices = [
+    {
+      weight: isArabic ? "حتى 15 كجم" : "Up to 15 kg",
+      price: "20",
+    },
+    {
+      weight: isArabic ? "من 16 إلى 20 كجم" : "16 kg to 20 kg",
+      price: "35",
+    },
+    {
+      weight: isArabic ? "من 21 إلى 25 كجم" : "21 kg to 25 kg",
+      price: "50",
+    },
+    {
+      weight: isArabic ? "من 26 إلى 30 كجم" : "26 kg to 30 kg",
+      price: "65",
+    },
+  ];
+
   return (
     <section
-      className="relative block bg-center bg-no-repeat mt-[10px] lg:mt-[100px] "
-      dir="rtl"
+      className="relative block bg-center bg-no-repeat mt-[10px] lg:mt-[100px]"
+      dir={isArabic ? "rtl" : "ltr"}
     >
-      <div className="container relative z-10 mx-auto px-4 py-0 lg:py-[100px] " id="prices">
+      <div
+        className="container relative z-10 mx-auto px-4 py-0 lg:py-[100px]"
+        id="prices"
+      >
         <motion.h2
           initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -54,7 +69,7 @@ export default function Prices() {
           }}
           className="text-center text-white text-custom24 lg:text-custom32 font-extrabold mb-8 lg:mb-12"
         >
-          التسعيرات
+          {isArabic ? "التسعيرات" : "Pricing"}
         </motion.h2>
 
         <motion.div
@@ -87,7 +102,7 @@ export default function Prices() {
                 }}
               />
 
-              <h3 className="text-white text-custom20 font-[500] my-2" dir="ltr">
+              <h3 className="text-white text-custom20 font-[500] my-2">
                 {item.weight}
               </h3>
 
@@ -118,8 +133,9 @@ export default function Prices() {
           }}
           className="mt-6 text-center text-white text-custom14 leading-6"
         >
-           الأسعار المذكورة خاصة بمدينة الرياض، للحصول على أسعار الشحن لباقي
-          المدن يرجى التواصل معنا أو تحميل التطبيق.
+          {isArabic
+            ? "الأسعار المذكورة خاصة بمدينة الرياض، للحصول على أسعار الشحن لباقي المدن يرجى التواصل معنا أو تحميل التطبيق."
+            : "The listed prices are for Riyadh city. To get shipping prices for other cities, please contact us or download the app."}
         </motion.p>
       </div>
     </section>

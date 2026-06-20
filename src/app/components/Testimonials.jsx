@@ -9,39 +9,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
-const reviews = [
-  {
-    company: "متجر ريحان للعطور",
-    job: "قطاع العطور والتجميل",
-    text: "هولرز ساعدتنا نرفع سرعة التوصيل داخل الرياض ونقلل تكلفة الشحن بشكل واضح.",
-  },
-  {
-    company: "نخبة الإلكترونيات",
-    job: "متجر إلكترونيات",
-    text: "التتبع والمتابعة مع العملاء صار أسهل، وتجربة الشحن أصبحت أكثر احترافية.",
-  },
-  {
-    company: "دار الأناقة",
-    job: "متجر أزياء",
-    text: "مع كثرة الطلبات اليومية، احتجنا شريك شحن منظم وسريع، وهولرز كانت خيار ممتاز.",
-  },
-  {
-    company: "تمور القصيم",
-    job: "منتجات غذائية",
-    text: "الخدمة مستقرة والأسعار مناسبة، والأهم أن الطلبات توصل في الوقت المتوقع.",
-  },
-  {
-    company: "بيوتي لاين",
-    job: "منتجات تجميل",
-    text: "فرق كبير في تنظيم الشحنات والمتابعة، خصوصًا للطلبات المتكررة داخل وخارج الرياض.",
-  },
-  {
-    company: "مخازن الرياض",
-    job: "تجارة وتوزيع",
-    text: "حل عملي للشركات والمتاجر التي تحتاج شحن سريع وتكلفة واضحة بدون تعقيد.",
-  },
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 40, filter: "blur(8px)" },
   show: {
@@ -55,11 +22,56 @@ const fadeUp = {
   },
 };
 
-export default function Testimonials() {
+export default function Testimonials({ isArabic }) {
+  const reviews = [
+    {
+      company: isArabic ? "متجر ريحان للعطور" : "Rehan Perfumes Store",
+      job: isArabic ? "قطاع العطور والتجميل" : "Perfumes and Beauty",
+      text: isArabic
+        ? "هولرز ساعدتنا نرفع سرعة التوصيل داخل الرياض ونقلل تكلفة الشحن بشكل واضح."
+        : "Haulerz helped us speed up delivery within Riyadh and clearly reduce shipping costs.",
+    },
+    {
+      company: isArabic ? "نخبة الإلكترونيات" : "Elite Electronics",
+      job: isArabic ? "متجر إلكترونيات" : "Electronics Store",
+      text: isArabic
+        ? "التتبع والمتابعة مع العملاء صار أسهل، وتجربة الشحن أصبحت أكثر احترافية."
+        : "Tracking and customer follow-up became easier, and the shipping experience became more professional.",
+    },
+    {
+      company: isArabic ? "دار الأناقة" : "Elegance House",
+      job: isArabic ? "متجر أزياء" : "Fashion Store",
+      text: isArabic
+        ? "مع كثرة الطلبات اليومية، احتجنا شريك شحن منظم وسريع، وهولرز كانت خيار ممتاز."
+        : "With many daily orders, we needed an organized and fast shipping partner, and Haulerz was an excellent choice.",
+    },
+    {
+      company: isArabic ? "تمور القصيم" : "Qassim Dates",
+      job: isArabic ? "منتجات غذائية" : "Food Products",
+      text: isArabic
+        ? "الخدمة مستقرة والأسعار مناسبة، والأهم أن الطلبات توصل في الوقت المتوقع."
+        : "The service is stable, the prices are suitable, and most importantly, orders arrive on time.",
+    },
+    {
+      company: isArabic ? "بيوتي لاين" : "Beauty Line",
+      job: isArabic ? "منتجات تجميل" : "Beauty Products",
+      text: isArabic
+        ? "فرق كبير في تنظيم الشحنات والمتابعة، خصوصًا للطلبات المتكررة داخل وخارج الرياض."
+        : "A big difference in shipment organization and follow-up, especially for recurring orders inside and outside Riyadh.",
+    },
+    {
+      company: isArabic ? "مخازن الرياض" : "Riyadh Warehouses",
+      job: isArabic ? "تجارة وتوزيع" : "Trading and Distribution",
+      text: isArabic
+        ? "حل عملي للشركات والمتاجر التي تحتاج شحن سريع وتكلفة واضحة بدون تعقيد."
+        : "A practical solution for companies and stores that need fast shipping and clear costs without complications.",
+    },
+  ];
+
   return (
     <section
       className="relative overflow-hidden bg-[#F8FAFC] pb-[200px] lg:pb-[100px] py-20 lg:py-28"
-      dir="rtl"
+      dir={isArabic ? "rtl" : "ltr"}
       id="testimonials"
     >
       <div className="absolute top-[-120px] right-[-120px] h-[300px] w-[300px] rounded-full bg-[#FFB000]/20 blur-[80px]" />
@@ -74,12 +86,11 @@ export default function Testimonials() {
           className="mb-12 text-center"
         >
           <span className="mx-auto block w-[120px] rounded-full border border-[#E7EAF0] bg-[#304C891A] px-5 py-2 text-custom14 font-[700] text-[#304C89] shadow-sm">
-            
-              الآراء
+            {isArabic ? "الآراء" : "Reviews"}
           </span>
 
           <h2 className="mt-5 text-custom28 font-[700] text-[#121212] lg:text-custom32">
-           آراء عملائنا
+            {isArabic ? "آراء عملائنا" : "What Our Clients Say"}
           </h2>
         </motion.div>
 
@@ -90,6 +101,7 @@ export default function Testimonials() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <Swiper
+            dir={isArabic ? "rtl" : "ltr"}
             modules={[Pagination, Autoplay, EffectCoverflow]}
             effect="coverflow"
             grabCursor={true}
@@ -147,7 +159,7 @@ export default function Testimonials() {
                     <FaQuoteLeft className="absolute left-6 top-6 text-[64px] text-[#FFB000]/10" />
 
                     <div className="relative z-10 mx-auto mb-5 flex h-[64px] w-[64px] items-center justify-center rounded-2xl bg-[#FFB000]/10 text-custom24 font-[800] text-[#FF9C00]">
-                      {item.company.charAt(0)} 
+                      {item.company.charAt(0)}
                     </div>
 
                     <div className="relative z-10 mb-5 flex justify-center gap-1">

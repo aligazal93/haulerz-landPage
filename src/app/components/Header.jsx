@@ -4,9 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import ChangeLanguage from "./ChangeLanguage";
 
-export default function Header() {
+export default function Header({ locale }) {
   const [open, setOpen] = useState(false);
+
+  const isArabic = locale === "ar";
+
+  const links = [
+    { title: isArabic ? "الرئيسية" : "Home", href: "#home" },
+    { title: isArabic ? "ليش هولرز ؟" : "Why Haulerz?", href: "#whyUs" },
+    { title: isArabic ? "التسعيرات" : "Pricing", href: "#prices" },
+    {
+      title: isArabic ? "ليش تختار هولرز؟" : "Why Choose Haulerz?",
+      href: "#whyChoose",
+    },
+    {
+      title: isArabic ? "آراء عملائنا" : "Testimonials",
+      href: "#testimonials",
+    },
+    { title: isArabic ? "تواصل معنا" : "Contact Us", href: "#contactUs" },
+  ];
 
   return (
     <>
@@ -21,7 +39,7 @@ export default function Header() {
         <div className="grid grid-cols-12 gap-2 items-center">
           <div className="col-span-12 lg:col-span-2">
             <div className="flex justify-between items-center">
-              <Link href="/">
+              <Link href={`/${locale}`}>
                 <Image
                   src="/images/1.svg"
                   alt="logo"
@@ -44,35 +62,47 @@ export default function Header() {
 
           <div className="hidden lg:block col-span-12 lg:col-span-8">
             <ul className="items-center justify-center gap-6 hidden xl:flex">
-              <li><Link href="#home" className="text-custom16 font-[400] transition-all duration-500 hover:text-primary text-white">الرئيسية</Link></li>
-              <li><Link href="#whyUs" className="text-custom16 font-[400] transition-all duration-500 hover:text-primary text-white">ليش هولرز ؟</Link></li>
-              <li><Link href="#prices" className="text-custom14 font-[400] transition-all duration-500 hover:text-primary text-white">التسعيرات</Link></li>
-              <li><Link href="#whyChoose" className="text-custom16 font-[400] transition-all duration-500 hover:text-primary text-white">ليش تختار هولرز؟</Link></li>
-              <li><Link href="#testimonials" className="text-custom16 font-[400] transition-all duration-500 hover:text-primary text-white">آراء عملائنا</Link></li>
-              <li><Link href="#contactUs" className="text-custom16 font-[400] transition-all duration-500 hover:text-primary text-white">تواصل معنا</Link></li>
+              {links.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-custom16 font-[400] transition-all duration-500 hover:text-primary text-white"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="hidden lg:block col-span-12 lg:col-span-2">
+          <div className="hidden lg:flex col-span-12 lg:col-span-2 gap-2">
+            <ChangeLanguage />
+
             <Link
               href="#contactUs"
-              className="lg:block hidden bg-primary hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom14 float-end text-secondary font-[700] px-8"
+              className="lg:block hidden bg-primary hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom14 float-end text-secondary font-[700] px-6"
             >
-              حمل التطبيق الان
+              {isArabic ? "حمل التطبيق الآن" : "Download App"}
             </Link>
           </div>
         </div>
       </div>
 
       <div
-        className={`fixed xl:hidden top-0 right-0 h-full w-[70%] max-w-[320px] bg-primary text-white transform transition-transform duration-300 z-[999999] p-5 overflow-hidden ${
-          open ? "translate-x-0" : "translate-x-full"
+        className={`fixed xl:hidden top-0 ${
+          isArabic ? "right-0" : "left-0"
+        } h-full w-[70%] max-w-[320px] bg-primary text-white transform transition-transform duration-300 z-[999999] p-5 overflow-hidden ${
+          open
+            ? "translate-x-0"
+            : isArabic
+            ? "translate-x-full"
+            : "-translate-x-full"
         }`}
         style={{
           backgroundImage: "url('/images/layer.png')",
         }}
       >
-        <Link href="/">
+        <Link href={`/${locale}`}>
           <Image
             src="/images/1.png"
             alt="logo"
@@ -83,21 +113,14 @@ export default function Header() {
         </Link>
 
         <ul className="mt-[40px]">
-          {[
-            ["الرئيسية", "/"],
-            ["ليش هولرز ؟", "#whyUs"],
-            ["التسعيرات", "#prices"],
-            ["ليش تختار هولرز؟", "#whyChoose"],
-            ["آراء عملائنا", "#testimonials"],
-            ["تواصل معنا", "#contactUs"],
-          ].map(([title, href]) => (
-            <li key={title}>
+          {links.map((item) => (
+            <li key={item.href}>
               <Link
-                href={href}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="text-custom14 block my-4 font-[400] transition-all duration-500 hover:text-primary text-white"
               >
-                {title}
+                {item.title}
               </Link>
             </li>
           ))}
@@ -108,7 +131,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
           className="block bg-primary text-center mt-[50px] hover:bg-secondary hover:text-white transition-all duration-500 p-4 rounded-full text-custom12 text-secondary font-[700] px-8"
         >
-          حمل التطبيق الان
+          {isArabic ? "حمل التطبيق الآن" : "Download App"}
         </Link>
       </div>
     </>
