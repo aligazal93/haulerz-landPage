@@ -24,18 +24,18 @@ export default function Video() {
       <div className="container">
         <div className="relative overflow-hidden rounded-[12px]">
           {/* Video */}
-          <video
-            ref={videoRef}
-            src="/images/vid.mp4"
-            poster="/images/video.png"
-            playsInline
-            preload="metadata"
-            controls={isPlaying}
-            onPlay={() => setIsPlaying(true)}
-            onPause={() => setIsPlaying(false)}
-            onEnded={() => setIsPlaying(false)}
-            className="h-auto w-full object-fill lg:h-[700px] "
-          />
+<video
+  ref={videoRef}
+  src="/images/vid.mp4"
+  poster="/images/video.png"
+  playsInline
+  preload="metadata"
+  controls={isPlaying}
+  onPlay={() => setIsPlaying(true)}
+  onPause={() => setIsPlaying(false)}
+  onEnded={() => setIsPlaying(false)}
+  className="h-auto max-h-[700px] w-full object-contain"
+/>
 
           {/* Play Button */}
           {!isPlaying && (
