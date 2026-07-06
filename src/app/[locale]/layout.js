@@ -2,7 +2,6 @@ import "../globals.css";
 import Header from "../components/Header";
 import localFont from "next/font/local";
 import ScrollToTop from "../components/ScrollToTop";
-import Script from "next/script";
 
 const fontZagel = localFont({
   src: "../../../public/fonts/ZagelArabicITF-Regular.otf",
