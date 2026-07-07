@@ -35,17 +35,13 @@ export default function Intro({ isArabic }) {
   const MotionImage = motion(Image);
 
   const text = {
-    badge: isArabic
-      ? "شحن ذكي يناسب احتياجك"
-      : "Smart shipping for your needs",
+    badge: isArabic ? "شحن ذكي يناسب احتياجك" : "Smart shipping for your needs",
 
     titleLine1: isArabic
       ? "خل شحناتك توصل أسرع..."
       : "Get your shipments delivered faster...",
 
-    titleLine2: isArabic
-      ? "وبتكلفة أقل"
-      : "at a lower cost",
+    titleLine2: isArabic ? "وبتكلفة أقل" : "at a lower cost",
 
     description: isArabic
       ? "حل لوجستي ذكي يسهل عليك إرسال شحناتك، بأسعار تنافسية وباقات تناسب حجم احتياجك."
@@ -145,28 +141,17 @@ export default function Intro({ isArabic }) {
             className="lg:col-span-6"
           >
             <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
               className="relative flex justify-center lg:justify-center"
             >
-              <MotionImage
+              <Image
                 src="/images/intro.png"
                 alt="Haulerz App"
                 width={900}
                 height={220}
                 priority
-                quality={100}
-                whileHover={{ scale: 1.0 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 22,
-                }}
-                className="mb-8 w-full h-auto object-contain"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 900px"
+                className="mb-8 h-auto w-full object-contain"
               />
             </motion.div>
           </motion.div>
